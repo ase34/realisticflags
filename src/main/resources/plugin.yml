@@ -1,0 +1,45 @@
+name: ${project.name}
+version: ${project.version}-${describe}
+authors: [ase34]
+main: de.ase34.realisticflags.RealisticFlagsPlugin
+depend: [flyingblocksapi]
+softdepend: [WorldEdit]
+commands:
+  realisticflags-newcolormap:
+    description: |
+      Loads a new color map from the specified URL.
+      The URL scheme is not limited to HTTP and can (unless not supported by the Java VM) support https://..., file://..., ftp://..., and other types.
+    usage: |
+      /<command> raw <key> <url>
+      /<command> worldedit <key>
+    permission: realisticflags.newcolormap
+  realisticflags-newflag:
+    description: |
+      Creates a new flag with the specified name and color map.
+      If the location is not given, this command uses the player's location aligned to the center of the containing block.
+      If the direction is not given, this command uses the player's direction rounded to 90 degrees.
+    usage: /<command> <name> <colormapkey> [<x>,<y>,<z> [<direction>]]
+    permission: realisticflags.newflag
+  realisticflags-respawn:
+    description: Respawns all flags.
+    usage: /<command>
+    permission: realisticflags.respawn
+  realisticflags-reload:
+    description: |
+      Reloads flags and color maps.
+      If "flags" nor "colormaps", both flags and color maps are reloaded.
+      If "force" is given, the command discards the currently saved objects and replaces them with the loaded ones.
+    usage: /<command> [flags|colormaps] [force]
+    permission: realisticflags.reload
+  realisticflags-listcolormaps:
+    description: |
+      Lists all avaliable color maps with widht and height.
+      The parameter "regex" can be filled with a Java regular expression. See http://goo.gl/fqpiz for more information.
+    usage: /<command> [<page-num> [<regex>]]
+    permission: realisticflags.listcolormaps
+  realisticflags-listflags:
+    description: |
+      Lists all avaliable color maps with attached color map and distance to the player.
+      The parameter "regex" can be filled with a Java regular expression. See http://goo.gl/fqpiz for more information.
+    usage: /<command> [<page-num> [<max-distance> [<regex>]]]
+    permission: realisticflags.listflags
