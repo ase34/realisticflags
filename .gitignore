@@ -6,3 +6,4 @@
 # Maven
 /build.xml
 /target
+/build.bat
