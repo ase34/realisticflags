@@ -43,3 +43,13 @@ commands:
       The parameter "regex" can be filled with a Java regular expression. See http://goo.gl/fqpiz for more information.
     usage: /<command> [<page-num> [<max-distance> [<regex>]]]
     permission: realisticflags.listflags
+  realisticflags-removecolormap:
+    description: |
+      Removes the color maps matching its key with the given regex.
+      The parameter "regex" can be filled with a Java regular expression. See http://goo.gl/fqpiz for more information.
+    usage: /<command> <regex>
+  realisticflags-removeflag:
+    description: |
+      Removes the flags matching its key with the given regex.
+      The parameter "regex" can be filled with a Java regular expression. See http://goo.gl/fqpiz for more information.
+    usage: /<command> <regex>

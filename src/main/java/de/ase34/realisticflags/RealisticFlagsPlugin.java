@@ -23,6 +23,8 @@ import de.ase34.realisticflags.executors.ListFlagsCommandExecutor;
 import de.ase34.realisticflags.executors.NewColorMapCommandExecutor;
 import de.ase34.realisticflags.executors.NewFlagCommandExecutor;
 import de.ase34.realisticflags.executors.ReloadCommandExecutor;
+import de.ase34.realisticflags.executors.RemoveColorMapCommandExecutor;
+import de.ase34.realisticflags.executors.RemoveFlagCommandExecutor;
 import de.ase34.realisticflags.executors.RespawnFlagsCommandExecutor;
 import de.ase34.realisticflags.gson.DyeColorMapPluginProxyCreator;
 import de.ase34.realisticflags.gson.DyeColorMapSerializer;
@@ -61,6 +63,10 @@ public class RealisticFlagsPlugin extends JavaPlugin {
             getCommand("realisticflags-listcolormaps").setExecutor(
                     new ListColorMapsCommandExecutor(this));
             getCommand("realisticflags-listflags").setExecutor(new ListFlagsCommandExecutor(this));
+            getCommand("realisticflags-removecolormap").setExecutor(
+                    new RemoveColorMapCommandExecutor(this));
+            getCommand("realisticflags-removeflag")
+                    .setExecutor(new RemoveFlagCommandExecutor(this));
 
             respawnFlags();
         } catch (Exception e) {
